@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Store</title>
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .bg-image {
+            background-image: url('images/34.png'); 
+            height: 600px; 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .navbar {
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .right {
+            flex: 1;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa; 
+        color: rgb(49, 49, 49);
+        position: relative;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icons a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: black;
+    }
+    .vertical-line {
+        border-left: 1px solid black;
+        height: 40px;
+        margin: 0 20px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-right">
+        <div class="container">
+            <a class="navbar-brand" href="/">Movie Store</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/movies/movielist">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <div class="bg-image">
+        <h1>Welcome to the Movie Store</h1>
+    </div>
+
+
+    <div class="content">
+        <div class="left">
+            <div align="center">
+            <h2>About Us</h2>
+            <p >Welcome to our movie store where you can find a wide selection of movies across various genres. Our mission is to provide the best movie experience for all cinephiles. Explore our collection, add your favorites, and enjoy the world of cinema !There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words</p>
+        </div> </div>
+        <div class="right">
+            <h2>Add a Movie</h2>
+            <form action="/movies" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Title" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="releaseYear" placeholder="Release Year" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="genre" placeholder="Genre ID" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="director" placeholder="Director ID" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="actors" placeholder="Actor IDs (comma-separated)" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="duration" placeholder="Duration (minutes)" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="rating" placeholder="Rating (1-10)" class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                </div>
+                <div class="form-group"> 
+                    <input type="file" name="movieImage" accept="image/*" required></div>
+                <div align="center">     <button type="submit"  class="btn btn-primary">Add Movie</button></div>
+           
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <h2>Movie Store</h2>
+        <p>Your gateway to the world of cinema. Discover, enjoy, and share the magic of movies.</p>
+        <p>Contact us for any inquiries or support.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+            </a>
+            <div class="vertical-line"></div>
+            <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">
+                <i class="fab fa-whatsapp"></i> 
+            </a>
+            <div class="vertical-line"></div>
+            <p>Mobile: 123-456-7890</p>
+            <div class="vertical-line"></div>
+            <p>Email: your.email@example.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
